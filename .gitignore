@@ -1,0 +1,22 @@
+﻿# Ignore Visual Studio build artifacts
+**/bin/
+**/obj/
+
+# Ignore auto-generated AssemblyInfo and cache files
+**/AssemblyInfo.cs
+**/*.AssemblyInfoInputs.cache
+**/*.AssemblyReference.cache
+**/*.CoreCompileInputs.cache
+**/*.FileListAbsolute.txt
+
+# VS and User files
+.vs/
+.vscode/
+*.user
+*.suo
+*.log
+*.cache
+
+# OS junk
+Thumbs.db
+.DS_Store
