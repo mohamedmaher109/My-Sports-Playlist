@@ -7,6 +7,6 @@ namespace MySportsPlaylist.Domain.Entities
 {
     public class ApplicationUser :IdentityUser<Guid>
     {
-        public ICollection<Playlist> Playlists { get; set; } = new List<Playlist>();
+        public ICollection<Playlist> Playlists { get; set; } = [];
     }
 }

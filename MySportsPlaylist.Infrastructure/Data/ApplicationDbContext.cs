@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using MySportsPlaylist.Domain.Entities;
 
 namespace MySportsPlaylist.Infrastructure.Data;
-public class ApplicationDbContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
+public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
 {
     public DbSet<Match> Matches { get; set; }
     public DbSet<Playlist> Playlists { get; set; }
