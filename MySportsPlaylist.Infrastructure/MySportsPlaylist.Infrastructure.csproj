@@ -20,4 +20,8 @@
     <ProjectReference Include="..\MySportsPlaylist.Domain\MySportsPlaylist.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+
 </Project>
