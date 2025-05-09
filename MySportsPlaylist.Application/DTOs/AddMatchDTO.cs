@@ -13,6 +13,6 @@ public class AddMatchDTO
     [Required]
     [StringLength(250, MinimumLength = 3)]
     public string Competition { get; set; }
-    public DateTime? Date { get; set; } = DateTime.UtcNow;
+    public DateTime? Date { get; set; }
     public MatchStatus Status { get; set; } // Live / Replay
 }

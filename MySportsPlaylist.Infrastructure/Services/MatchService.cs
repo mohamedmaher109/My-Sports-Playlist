@@ -21,6 +21,7 @@ public class MatchService : IMatchService
             Title = match.Title,
             Competition = match.Competition,
             Status = match.Status,
+            Date = match.Date,
         };
         await _unitOfWork.Matches.AddAsync(newMatch);
         await _unitOfWork.CompleteAsync();
