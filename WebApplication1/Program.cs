@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using MySportsPlaylist.Application.Interfaces;
 using MySportsPlaylist.Domain.Entities;
+using MySportsPlaylist.Infrastructure;
 using MySportsPlaylist.Infrastructure.Data;
+using MySportsPlaylist.Infrastructure.Repositories;
 using MySportsPlaylist.Infrastructure.Services;
 using System.Text;
 
@@ -16,6 +18,9 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 {
     options.SuppressModelStateInvalidFilter = true;
 });
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IMatchRepository, MatchRepository>();
+builder.Services.AddScoped<IPlaylistRepository, PlaylistRepository>();
 // Register DbContext with SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

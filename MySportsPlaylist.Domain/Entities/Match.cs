@@ -10,10 +10,12 @@ public class Match
     public Guid Id { get; set; }
 
     [StringLength(250, MinimumLength = 3)]
+    [Required]
     public string Title { get; set; }
 
     [StringLength(250, MinimumLength = 3)]
+    [Required]
     public string Competition { get; set; }
-    public DateTime? Date { get; set; }
+    public DateTime? Date { get; set; } 
     public MatchStatus Status { get; set; } // Live / Replay
 }
